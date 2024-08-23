@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends "AppKim/padre.html" %}
+    {% block contenidoQueCambia %}
+    <header class="masthead">
+        <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+            <div class="d-flex justify-content-center">
+                <div class="text-center">
+                    <h1 class="mx-auto my-0 text-uppercase">¡No Esperes Más!</h1>
+                    <h2 class="text-white-50 mx-auto mt-2 mb-5">Complete el formulario para Transformar Tu Futuro.</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container mt-4">
+        <form method="post">
+            {% csrf_token %}
+            
+            <div class="form-group">
+                <label for="carrera">Carrera:</label>
+                <input type="text" id="carrera" name="carrera" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="materia">Camada:</label>
+                <input type="number" id="Camada" name="Camada" class="form-control" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Guardar</button>
+        </form>
+    </div>
+    {% endblock %}
+</head>
+</html>

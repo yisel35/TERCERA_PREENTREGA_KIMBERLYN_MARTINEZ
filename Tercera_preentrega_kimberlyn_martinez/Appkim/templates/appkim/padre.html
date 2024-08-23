@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Grayscale - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'appkim/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="{% url 'inicio' %}">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'crear_curso' %}">Curso</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'crear_profesor' %}">Profesor</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'crear_estudiante' %}">Estudiantes</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Masthead-->
+        {% block contenidoQueCambia %}
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">Bienvenido a  Appkim</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">Innovacion Digital a tu Alcance.</h2>
+                        <a class="btn btn-primary" href="#about">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        {% endblock %}
+        <!-- About-->
+        
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'appkim/assets/img/demo-image-01.jpg' %}" alt="..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>Cumbre</h4>
+                            <p class="text-black-50 mb-0">"El estudio es un viaje hacia las cumbres del conocimiento; cada página leída es un paso más cerca de la cima."</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'appkim/assets/img/demo-image-01.jpg' %}" alt="..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <p class="mb-0 text-white-50">Estudiar es como escalar una montaña: el esfuerzo puede ser arduo, pero el panorama que descubres al llegar a la cima vale cada momento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{% static 'appkim/assets/img/demo-image-02.jpg' %}" alt="..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">Cadena de montaña</h4>
+                                    <p class="mb-0 text-white-50">El conocimiento es una cadena de montañas por explorar; cada libro es un nuevo sendero que te lleva a vistas más amplias de tu futuro</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- MENU DE BUSQUEDAD-->
+    <section class="bg-light" id="buscar">
+        <div class="container px-4 px-lg-5 mt-5">
+            <h3 class="text-center mb-4">Buscar en la Base de Datos</h3>
+            <form method="get" action="{% url 'buscar' %}">
+                <div class="input-group mb-3">
+                    <input type="text" name="query" class="form-control" placeholder="Escribe lo que deseas buscar..." aria-label="Buscar" aria-describedby="button-search" required>
+                    <button class="btn btn-primary" type="submit" id="button-search">Buscar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
+
+        </section>
+        
